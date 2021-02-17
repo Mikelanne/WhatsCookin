@@ -10,12 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_15_000721) do
+ActiveRecord::Schema.define(version: 2021_02_17_184040) do
 
-  create_table "cookbooks", force: :cascade do |t|
-    t.string "title"
-    t.string "meal_type"
-    t.string "cuisine"
+  create_table "country_of_origins", force: :cascade do |t|
+    t.string "country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -24,10 +22,9 @@ ActiveRecord::Schema.define(version: 2021_02_15_000721) do
     t.string "ingredients"
     t.text "directions"
     t.integer "skill_level"
-    t.string "cuisine"
     t.string "meal_type"
     t.integer "user_id"
-    t.integer "cookbook_id"
+    t.integer "country_of_origin_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

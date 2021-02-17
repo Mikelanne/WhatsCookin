@@ -1,0 +1,2 @@
+class CountryOfOriginsController < ApplicationController
+end

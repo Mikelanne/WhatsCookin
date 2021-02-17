@@ -1,34 +1,32 @@
 MODELS
     - User
         has_many recipes
-        has_many cookbooks, through recipes
+        has_many CountryOfOrigins, through recipes
 
         attributes
             - username
             - password
             - skill level
 
-    - Cookbook
+    - CountryOfOrigin
         has_many recipes
         has_many users, through recipes
 
         attributes
-            - title
+            - Country_of_origin
             - meal type
-            - cuisine
 
     - Recipe
-        belongs_to cookbook
+        belongs_to CountryOfOrigin
         belongs_to user
 
         attributes
             - ingredients
             - directions
             - skill level
-            - cuisine
             - meal type
             - user_id
-            - cookbook_id
+            - CountryOfOrigin_id
 
 MIGRATIONS
 
