@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_184040) do
+ActiveRecord::Schema.define(version: 2021_02_18_171518) do
 
   create_table "country_of_origins", force: :cascade do |t|
     t.string "country"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2021_02_17_184040) do
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string "ingredients"
     t.text "directions"
     t.integer "skill_level"
     t.string "meal_type"
@@ -27,6 +26,8 @@ ActiveRecord::Schema.define(version: 2021_02_17_184040) do
     t.integer "country_of_origin_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.text "ingredients"
   end
 
   create_table "users", force: :cascade do |t|

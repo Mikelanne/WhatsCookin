@@ -28,6 +28,13 @@ MODELS
             - user_id
             - CountryOfOrigin_id
 
+MEAL TYPES 
+- breakfast
+- lunch
+- dinner
+- dessert
+- snacks
+
 MIGRATIONS
 
 
