@@ -37,16 +37,18 @@ MEAL TYPES
 
 
 TO DO:
-[] scope method where the recipes are ordered by meal type.
+[x] scope method where the recipes are ordered by meal type.
+[] use scope methods in views somewhere
+[] oauth
+[] nested routes
+    [] a nested new route with form that relates to the parent (so, new recipe for user.)
+    [] a nested index or show route (user's recipes) **Can I do a nested route under users if I have protections to ensure only the user who is signed in can go to their route?**
+[] forms should display validation errors
+    [] fields_with_errors class (form_for)
+    [] error messages must be present within the view
+[] DRY
+    [] logic present in controllers should be encapsulated as methods in your models
+    [] viwes should use helper methods and partials when appropriate
+    [] follow patterns in Rails Style Guide
 
-
-MIGRATIONS
-
-
-CONTROLLERS
-
-
-VIEWS
-
-
-ROUTES
+    

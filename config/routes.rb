@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'application#home'
   resources :recipes
   resources :country_of_origins
   resources :users
