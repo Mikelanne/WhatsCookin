@@ -1,0 +1,16 @@
+<%= form_for(@recipe) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :skill_level %>
+    <%= f.number_field :skill_level %><br>
+    <%= f.label :ingredients %>
+    <%= f.text_area :ingredients %><br>
+    <%= f.label :directions %>
+    <%= f.text_area :directions %><br>
+    <%= f.label "What country did this recipe originate in?" %>
+    <%= f.collection_select(:country_of_origin_id, CountryOfOrigin.all, :id, :country) %>
+    <b>I want to create a new country here</b><br>
+    <%= f.label "Which user do you want to send this recipe to?" %>
+    <%= f.collection_select(:user_id, User.all, :id, :username) %><br>
+    <%= f.submit %>
+<% end %>
