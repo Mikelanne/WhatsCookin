@@ -35,6 +35,11 @@ MEAL TYPES
 - dessert
 - snacks
 
+
+TO DO:
+[] scope method where the recipes are ordered by meal type.
+
+
 MIGRATIONS
 
 
