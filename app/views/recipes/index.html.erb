@@ -1,5 +1,6 @@
+<h1>All Recipes</h1>
 <ul>
 <% @recipes.each do |recipe| %>
-    <li><%= recipe.name %></li>
+    <li><%= recipe.name %> - Skill Level: <%= recipe.skill_level %></li>
 <% end %>
 </ul>

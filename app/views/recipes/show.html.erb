@@ -1,0 +1,9 @@
+<h1><%= @recipe.name %></h1>
+<h3><%= @recipe.country_of_origin.country %> - <%= @recipe.meal_type.capitalize %></h3>
+<label>Skill Level: </label><%= @recipe.skill_level %><br><br>
+
+<label>Ingredients:</label>
+<p><%= @recipe.ingredients %></p>
+
+<label>Directions:</label>
+<p><%= @recipe.directions %></p>

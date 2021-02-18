@@ -1,10 +1,11 @@
 class RecipesController < ApplicationController
 
     def index
-       @recipes = Recipe.all
+       @recipes = Recipe.all.ordered_by_skill_level
     end
 
     def show
+        @recipe = Recipe.find_by(id: params[:id])
     end
 
     def new

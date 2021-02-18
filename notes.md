@@ -50,5 +50,7 @@ TO DO:
     [] logic present in controllers should be encapsulated as methods in your models
     [] viwes should use helper methods and partials when appropriate
     [] follow patterns in Rails Style Guide
+[] welcome page
+[] style
 
     
