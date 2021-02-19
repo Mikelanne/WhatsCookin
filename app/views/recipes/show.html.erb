@@ -7,3 +7,5 @@
 
 <label>Directions:</label>
 <p><%= @recipe.directions %></p>
+
+<%= link_to("Delete Recipe", recipe_path(@recipe), method: "delete") %>
