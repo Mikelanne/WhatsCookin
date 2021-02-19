@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
     end
 
     def create
+
     end
 
     def edit
@@ -22,5 +23,11 @@ class RecipesController < ApplicationController
     end
 
     def destroy
+    end
+
+    private
+
+    def recipe_params
+        params.require(:recipe).permit(:name, :ingredients, :directions, :skill_level, :meal_type, :user_id, :country_of_origin_id)
     end
 end

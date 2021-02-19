@@ -3,6 +3,8 @@
     <%= f.text_field :name %><br>
     <%= f.label :skill_level %>
     <%= f.number_field :skill_level %><br>
+    <%= f.label :meal_type %>
+    <%= f.select :meal_type, [['breakfast'], ['lunch'], ['dinner'], ['dessert'], ['snack']] %><br>
     <%= f.label :ingredients %>
     <%= f.text_area :ingredients %><br>
     <%= f.label :directions %>
