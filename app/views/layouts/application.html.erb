@@ -11,6 +11,10 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  <% if flash[:message] %>
+    <div class="field_with_errors"><%= flash[:message] %></div>
+  <% end %>
+        <%= yield %>
   </body>
 </html>
