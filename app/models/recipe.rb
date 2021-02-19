@@ -6,13 +6,14 @@ class Recipe < ApplicationRecord
     scope :lunch, -> { where(meal_type: "lunch")}
     scope :dinner, -> { where(meal_type: "dinner")}
     scope :snack, -> { where(meal_type: "snack")}
-    # accepts_nested_attributes_for :country_of_origin
 
     def self.ordered_by_skill_level
         self.order(skill_level: :asc)
     end
 
     def country_of_origin_attributes=(attr)
-        self.country_of_origin = CountryOfOrigin.find_or_create_by(country: attr[:country])
+        if !attr[:country].blank?
+            self.country_of_origin = CountryOfOrigin.find_or_create_by(country: attr[:country])
+        end
     end
 end

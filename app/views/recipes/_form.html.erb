@@ -14,6 +14,7 @@
     <%= f.label :directions %>
     <%= f.text_area :directions %><br>
     <%= f.label "What country did this recipe originate in?" %>
+    <%= f.collection_select :country_of_origin_id, CountryOfOrigin.all, :id, :country, prompt: true %>
     <%= f.fields_for :country_of_origin do |c| %>
         <%= c.label :country %>
         <%= c.text_field :country %>
