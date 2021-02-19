@@ -17,9 +17,10 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find_by(id: params[:id]) 
-        if @user = current_user
+        if @user == current_user
             render :show
         else
+            flash[:message] = "No peeking! You can only see your own homepage."
             redirect_to user_path(current_user)
         end
     end
