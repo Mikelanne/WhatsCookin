@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     end
 
     def current_user
-      session[:name]
+      session[:user_id] ||= user.id
     end
   
     private

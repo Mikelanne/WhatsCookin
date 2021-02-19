@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
-            redirect_to '/' # will want to redirect to user show page once created
+            redirect_to user_path(user)
         else
             flash[:message] = "Invalid credentials. Please try again."
             redirect_to '/login'
