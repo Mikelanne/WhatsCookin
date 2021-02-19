@@ -17,7 +17,6 @@ class RecipesController < ApplicationController
         if @recipe.save
             redirect_to recipes_path
         else
-            @errors = @recipe.errors.full_messages
             render :new
         end
     end

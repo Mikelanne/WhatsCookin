@@ -41,8 +41,8 @@ TO DO:
 [] use scope methods in views somewhere
 [] oauth
 [] nested routes
-    [] a nested new route with form that relates to the parent (so, new recipe for user.)
-    [] a nested index or show route (user's recipes) **Can I do a nested route under users if I have protections to ensure only the user who is signed in can go to their route?**
+    [] a nested new route with form that relates to the parent (nest recipe new under country?)
+    [] a nested index or show route (under country, recipe index for all the recipes related to that country.)
 [] forms should display validation errors
     [] fields_with_errors class (form_for)
     [] error messages must be present within the view
@@ -56,5 +56,11 @@ TO DO:
 
 [] do more with country show page
 [] do more with country index
+
+[] add description to recipes 
+[] nav links
+[] partials for recipes
+[] figure out why you have require login or if you need it
+[] user CAN change country_id on recipe under edit
 
     

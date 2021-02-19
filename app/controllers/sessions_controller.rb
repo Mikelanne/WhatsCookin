@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
 
-
     def new
     end 
 
@@ -10,7 +9,7 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             redirect_to user_path(user)
         else
-            flash[:message] = "Invalid credentials. Please try again."
+            flash[:message] = "Invalid log in. Please try again."
             redirect_to '/login'
         end
     end 
