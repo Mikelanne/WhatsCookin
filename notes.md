@@ -38,11 +38,11 @@ MEAL TYPES
 
 TO DO:
 [x] scope method where the recipes are ordered by meal type.
-[] use scope methods in views somewhere
+[x] use scope methods in views somewhere
 [] oauth
 [] nested routes
     [] a nested new route with form that relates to the parent (nest recipe new under country?)
-    [] a nested index or show route (under country, recipe index for all the recipes related to that country.)
+    [x] a nested index or show route (under country, recipe index for all the recipes related to that country.)
 [] forms should display validation errors
     [] fields_with_errors class (form_for)
     [] error messages must be present within the view
@@ -66,3 +66,5 @@ TO DO:
 
 
     
+
+    <%= f.collection_select(:country_of_origin_id, CountryOfOrigin.all, :id, :country, {:include_blank => true} )%>

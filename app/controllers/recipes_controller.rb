@@ -15,12 +15,13 @@ class RecipesController < ApplicationController
 
     def new
         @recipe = Recipe.new
+        @recipe.build_country_of_origin
     end
 
     def create
-        @recipe = Recipe.new(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :user_id, :country_of_origin_id, :description))
+        @recipe = Recipe.new(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :user_id, :country_of_origin_id, :description, country_of_origin_attributes: [:country] ))
         if @recipe.save
-            redirect_to recipes_path
+            redirect_to recipe_path(@recipe)
         else
             render :new
         end
