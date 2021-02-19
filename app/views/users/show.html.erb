@@ -1,7 +1,11 @@
-<%= @user.username %>
+Welcome back to your cookbook, <%= @user.username %>!
+
+What would you like to cook today?
 
 <ul>
 <% @user.recipes.each do |recipe| %>
-    <li><%= recipe.name %></li>
+    <li><%= link_to recipe.name, recipe_path(recipe) %></li>
 <% end %>
 </ul>
+
+<%= link_to "See all Recipes in the library", recipes_path %>

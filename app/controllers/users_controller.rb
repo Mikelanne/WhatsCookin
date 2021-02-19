@@ -16,7 +16,12 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = User.find_by(id: params[:id])
+        @user = User.find_by(id: params[:id]) 
+        if @user = current_user
+            render :show
+        else
+            redirect_to user_path(current_user)
+        end
     end
 
     private
