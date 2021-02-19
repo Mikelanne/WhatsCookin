@@ -1,4 +1,4 @@
-<h1>All Recipes</h1>
+<%= render 'recipes' %>
 <ul>
 <% @recipes.each do |recipe| %>
     <li><%= recipe.name %> - Skill Level: <%= recipe.skill_level %></li>

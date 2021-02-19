@@ -1,7 +1,12 @@
 class RecipesController < ApplicationController
 
     def index
-       @recipes = Recipe.all.ordered_by_skill_level
+        if params[:country_of_origin_id]
+            @country = CountryOfOrigin.find(params[:country_of_origin_id])
+            @recipes = @country.recipes
+        else 
+            @recipes = Recipe.all.ordered_by_skill_level
+        end
     end
 
     def show
@@ -35,6 +40,10 @@ class RecipesController < ApplicationController
         recipe = Recipe.find_by(id: params[:id])
         recipe.destroy
         redirect_to recipes_path
+    end
+
+    def dinner
+        @dinner = Recipe.dinner
     end
 
     private
