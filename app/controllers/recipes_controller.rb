@@ -27,7 +27,7 @@ class RecipesController < ApplicationController
 
     def update
         @recipe = Recipe.find_by(id: params[:id])
-        @recipe.update(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type))
+        @recipe.update(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :country_of_origin_id))
         redirect_to recipe_path(@recipe)
     end
 

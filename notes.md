@@ -63,4 +63,10 @@ TO DO:
 [] figure out why you have require login or if you need it
 [] user CAN change country_id on recipe under edit
 
+
+    <%= # f.label "Which user do you want to send this recipe to?" %>
+    <%=  # f.collection_select(:user_id, User.all, :id, :username, {:include_blank => true} ) %><br>
+    <%= # f.submit %>
+<% # end %>
+
     
