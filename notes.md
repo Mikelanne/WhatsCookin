@@ -60,7 +60,7 @@ TO DO:
 [] add description to recipes 
 [] nav links
 [x] partials for recipes
-    [] figure out how to render a partial within a partial for the new form only
+    [] figure out how to render a partial within a partial for the new form only -- like we did for countries in form, do that for user_id maybe?
 [] figure out why you have require login or if you need it
 [x] user CAN change country_id on recipe under edit
 
