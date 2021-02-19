@@ -52,5 +52,6 @@ TO DO:
     [] follow patterns in Rails Style Guide
 [] welcome page
 [] style
+[] figure out edit form to not allow changes to user_id or country_of_origin_id
 
     
