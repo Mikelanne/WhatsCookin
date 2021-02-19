@@ -10,4 +10,8 @@
 <label>Directions:</label>
 <p><%= @recipe.directions %></p>
 
-<%= link_to("Delete Recipe", recipe_path(@recipe), method: "delete") %>
+
+<% if current_user.id == @recipe.user.id %>
+    <%= link_to("Delete Recipe", recipe_path(@recipe), method: "delete") %><br>
+    <%= link_to("Edit Recipe", edit_recipe_path(@recipe)) %>
+<% end %>

@@ -1,6 +1,8 @@
 <%= render 'recipes' %>
 <ul>
 <% @recipes.each do |recipe| %>
-    <li><%= recipe.name %> - Skill Level: <%= recipe.skill_level %></li>
+    <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
 <% end %>
 </ul>
+
+<%= link_to "I only want to see dinner recipes", dinner_path %>
