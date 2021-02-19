@@ -5,6 +5,7 @@ class CountryOfOriginsController < ApplicationController
     end
 
     def show
+        @country = CountryOfOrigin.find_by(id: params[:id])
     end
 
 end
