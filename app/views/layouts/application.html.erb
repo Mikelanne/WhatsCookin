@@ -10,6 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <div id="wrap_one">
   <body>
 
   <% if flash[:message] %>
@@ -17,8 +18,11 @@
   <% end %>
         <%= yield %>
   </body>
+  </div>
 
+<div id="wrap_two">
 <footer> 
   <%= current_user.username %> - Log Out
 </footer>
 </html>
+</div>
