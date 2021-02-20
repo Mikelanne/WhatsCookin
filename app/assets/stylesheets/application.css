@@ -64,6 +64,10 @@
   }
 
   #field_with_errors {
+    color: rgb(174, 0, 255);
+  }
+
+  #error_explanation {
     color: red;
   }
 
