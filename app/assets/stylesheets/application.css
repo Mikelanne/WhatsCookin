@@ -55,6 +55,10 @@
     padding: 0;
   }
 
+  h1 {
+    color: rgb(255, 92, 51);
+  }
+
 a {
     text-decoration: none;     
     font-family: Georgia;                  
