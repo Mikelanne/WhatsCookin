@@ -59,6 +59,14 @@
     color: rgb(0, 179, 89);
   }
 
+  #form {
+    text-align: left;
+  }
+
+  #field_with_errors {
+    color: red;
+  }
+
 a {
     text-decoration: none;     
     font-family: Georgia;                  
