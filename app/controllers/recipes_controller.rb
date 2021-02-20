@@ -13,13 +13,17 @@ class RecipesController < ApplicationController
     end
 
     def new
-        @recipe = Recipe.new
-        @recipe.build_country_of_origin
+        if params[:country_id] && @country = CountryOfOrigin.find_by_id(params[:country_id])
+            @recipe = @country.recipes.build
+        else
+            @recipe = Recipe.new
+            @recipe.build_country_of_origin
+        end
     end
 
     def create
         @recipe = Recipe.new(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :description, :country_of_origin_id, country_of_origin_attributes: [:name]))
-        @recipe.user_id = current_user
+        @recipe.user_id = current_user.id
         if @recipe.save
             redirect_to recipe_path(@recipe)
         else
