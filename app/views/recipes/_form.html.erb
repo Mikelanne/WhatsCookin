@@ -1,9 +1,9 @@
-<div id=field_with_errors>
+
 <%= render 'errors' %>
-</div>
+
 
 <div id=form>
-<%= form_for(@recipe) do |f| %>
+<%= form_for([@country, @recipe]) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %><br>
     <%= f.label :skill_level %>
@@ -16,12 +16,7 @@
     <%= f.text_area :ingredients %><br>
     <%= f.label :directions %>
     <%= f.text_area :directions %><br>
-    <%= f.label "What country did this recipe originate in?" %>
-    <%= f.collection_select :country_of_origin_id, CountryOfOrigin.all, :id, :name, prompt: true %>
-    <%= f.fields_for :country_of_origin do |c| %>
-        <%= c.label :name %>
-        <%= c.text_field :name %>
-    <% end %><br>
+    <%= display_country_fields(@country, f) %>
     <%= f.submit %>
 <% end %>
 </div>

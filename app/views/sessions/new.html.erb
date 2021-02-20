@@ -1,5 +1,6 @@
 <h1>Log in and get cookin'!</h1>
 
+<div id=form>
 <%= form_with(url: '/login') do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %><br>
@@ -7,3 +8,4 @@
     <%= f.password_field :password %><br>
     <%= f.submit "Log In" %>
 <% end %>
+</div>

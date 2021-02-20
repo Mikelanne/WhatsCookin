@@ -1,0 +1,6 @@
+<%= f.label "What country did this recipe originate in?" %>
+    <%= f.collection_select :country_of_origin_id, CountryOfOrigin.all, :id, :name, prompt: true %>
+    <%= f.fields_for :country_of_origin do |c| %>
+        <%= c.label :name %>
+        <%= c.text_field :name %>
+    <% end %><br>
