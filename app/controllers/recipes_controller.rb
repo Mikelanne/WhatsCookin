@@ -33,6 +33,12 @@ class RecipesController < ApplicationController
 
     def edit
         @recipe = Recipe.find_by(id: params[:id])
+        if @recipe.user_id == current_user.id
+            render :edit
+        else
+            flash[:message] = "You can only edit your own recipes."
+            redirect_to user_path(current_user)
+        end
     end
 
     def update
