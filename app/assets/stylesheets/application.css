@@ -18,9 +18,9 @@
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 50px;
-    background-color: rgb(135, 178, 243);      
+    background-color: rgb(246, 247, 192);      
     background-size: 100%;         
-    color: black;                
+    color: rgb(114, 114, 114);                
     text-align: center;
     font-family: Georgia;
 }
@@ -36,17 +36,23 @@
     padding: 35px;
     
   }
-  #wrap_two {
-    width: 80%;
+  footer {
+    width: 50%;
     margin: auto;
-    background: rgb(90, 181, 241);
+    background: rgb(241, 237, 230);
     overflow: hidden;
-    color: black;                
+    color: rgb(136, 134, 141);                
     text-align: center;
     font-family: Georgia;
-    border: 5px groove whitesmoke;
-    padding: 35px;
+    padding: 15px;
     
+  }
+
+  ul {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
   }
 
 a {
@@ -54,12 +60,12 @@ a {
     font-family: Georgia;                  
     font-weight: bold;          
 }a:link {             
-     color: rgb(51, 9, 68);
+     color: rgb(223, 82, 0);
 }
 a:hover {
-     color:purple;
+     color:rgb(245, 83, 151);
 }
 a:visited {
-     color: clear;
+     color: rgb(241, 125, 30);
 }
 
