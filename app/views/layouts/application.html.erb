@@ -20,7 +20,10 @@
   </body>
 <hr>
 <footer> 
-  <%= current_user.username %> - <%= link_to("Log Out", logout_path, method: "delete") %><br>
+   <% if logged_in? %>
+        <small><%= current_user.username %></small><br>
+        <small><%= link_to "Log Out", logout_path, method: "delete" %></small>
+    <% end %>
 </footer>
 </html>
 </div>

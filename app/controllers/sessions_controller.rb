@@ -15,8 +15,10 @@ class SessionsController < ApplicationController
     end 
 
     def destroy
-        session.delete[:user_id]
-        redirect_to '/login'
+        if logged_in?
+            session.clear
+            redirect_to '/login'
+        end
     end
 
 end

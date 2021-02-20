@@ -54,8 +54,13 @@ class RecipesController < ApplicationController
 
     def destroy
         recipe = Recipe.find_by(id: params[:id])
-        recipe.destroy
-        redirect_to recipes_path
+        if recipe.user_id == current_user.id
+            recipe.destroy
+            redirect_to recipes_path
+        else
+            flash[:message] = "You can only delete your own recipes."
+            redirect_to recipes_path(recipe)
+        end
     end
 
     def dinner
