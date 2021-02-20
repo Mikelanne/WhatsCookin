@@ -1,9 +1,8 @@
 class RecipesController < ApplicationController
 
     def index
-        if params[:country_of_origin_id]
-            @country = CountryOfOrigin.find(params[:country_of_origin_id])
-            @recipes = @country.recipes
+        if params[:country_id] && @country = CountryOfOrigin.find_by_id(params[:country_id])
+            @recipes = @country.recipes.ordered_by_skill_level
         else 
             @recipes = Recipe.all.ordered_by_skill_level
         end

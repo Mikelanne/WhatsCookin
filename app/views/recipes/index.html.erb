@@ -4,5 +4,9 @@
     <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
 <% end %>
 </ul>
+<br><br>
 
-<%= link_to "I only want to see dinner recipes", dinner_path %>
+
+<% if !params[:country_id] %>
+    <%= link_to "I only want to see dinner recipes", dinner_path %>
+<% end %>
