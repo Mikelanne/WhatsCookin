@@ -19,7 +19,7 @@ class RecipesController < ApplicationController
     end
 
     def create
-        @recipe = Recipe.new(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :description, :country_of_origin_id, country_of_origin_attributes: [:country]))
+        @recipe = Recipe.new(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :description, :country_of_origin_id, country_of_origin_attributes: [:name]))
         @recipe.user_id = current_user
         if @recipe.save
             redirect_to recipe_path(@recipe)
@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
 
     def update
         @recipe = Recipe.find_by(id: params[:id])
-        @recipe.update(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :country_of_origin_id, :description))
+        @recipe.update(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :country_of_origin_id, :description, country_of_origin_attributes: [:name]))
         redirect_to recipe_path(@recipe)
     end
 

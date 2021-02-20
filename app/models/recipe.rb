@@ -12,8 +12,8 @@ class Recipe < ApplicationRecord
     end
 
     def country_of_origin_attributes=(attr)
-        if !attr[:country].blank?
-            self.country_of_origin = CountryOfOrigin.find_or_create_by(country: attr[:country])
+        if !attr[:name].blank?
+            self.country_of_origin = CountryOfOrigin.find_or_create_by(name: attr[:name])
         end
     end
 end
