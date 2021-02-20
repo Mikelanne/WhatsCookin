@@ -43,8 +43,13 @@ class RecipesController < ApplicationController
 
     def update
         @recipe = Recipe.find_by(id: params[:id])
-        @recipe.update(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :country_of_origin_id, :description, country_of_origin_attributes: [:name]))
-        redirect_to recipe_path(@recipe)
+        if @recipe.user_id == current_user.id
+            @recipe.update(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :country_of_origin_id, :description, country_of_origin_attributes: [:name]))
+            redirect_to recipe_path(@recipe)
+        else
+            flash[:message] = "You can only edit your own recipes."
+            redirect_to user_path(current_user)
+        end
     end
 
     def destroy
