@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   get '/users/:id', to: 'users#show', as: 'user'
 
-  resources :country_of_origins, only: [:show, :index], as: 'countries' do
+  resources :country_of_origin, only: [:show, :index], as: 'countries' do
       resources :recipes, only: [:index, :new, :create]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

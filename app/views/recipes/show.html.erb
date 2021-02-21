@@ -13,5 +13,8 @@
 
 <% if current_user.id == @recipe.user.id %>
     <%= link_to("Delete Recipe", recipe_path(@recipe), method: "delete") %><br>
-    <%= link_to("Edit Recipe", edit_recipe_path(@recipe)) %>
+    <%= link_to("Edit Recipe", edit_recipe_path(@recipe)) %><br><br>
 <% end %>
+
+<%= link_to("Back to Recipe Library", recipes_path) %><br>
+<%= link_to("Back to Homepage", user_path(current_user)) %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_20_183325) do
+ActiveRecord::Schema.define(version: 2021_02_21_192807) do
 
   create_table "country_of_origins", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 2021_02_20_183325) do
     t.integer "skill_level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "uid"
+    t.string "provider"
   end
 
 end
