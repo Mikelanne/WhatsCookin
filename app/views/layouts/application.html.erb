@@ -12,9 +12,13 @@
 
   <div id="wrap_one">
   <body>
-
+  <div id="form">
+  <%= link_to("Recipe Library", recipes_path) %> - 
+  <%= link_to("New Recipe", new_recipe_path) %> 
+  <%= button_to("Log In With Google", '/auth/google_oauth2')%>
+  </div>
   <% if flash[:message] %>
-    <div class="field_with_errors"><%= flash[:message] %></div>
+    <div class="field_with_errors"><b><%= flash[:message] %></b></div>
   <% end %>
         <%= yield %>
   </body>

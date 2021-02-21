@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
     def index
-        if params[:country_id] && @country = CountryOfOrigin.find_by_id(params[:country_id])
+        if params[:country_of_origin_id] && @country = CountryOfOrigin.find_by_id(params[:country_of_origin_id])
             @recipes = @country.recipes.ordered_by_skill_level
         else 
             @recipes = Recipe.all.ordered_by_skill_level
@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
     end
 
     def new
-        if params[:country_id] && @country = CountryOfOrigin.find_by_id(params[:country_id])
+        if params[:country_of_origin_id] && @country = CountryOfOrigin.find_by_id(params[:country_of_origin_id])
             @recipe = @country.recipes.build
         else
             @recipe = Recipe.new

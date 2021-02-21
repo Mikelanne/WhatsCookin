@@ -3,7 +3,7 @@
 
 
 <div id=form>
-<%= form_for(@recipe) do |f| %>
+<%= form_for([@country, @recipe]) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %><br>
     <%= f.label :skill_level %>
