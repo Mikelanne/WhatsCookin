@@ -9,11 +9,6 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   get '/users/:id', to: 'users#show', as: 'user'
-  get '/dinner', to: 'recipes#dinner'
-  get '/breakfast', to: 'recipes#breakfast'
-  get '/lunch', to: 'recipes#lunch'
-  get '/snacks', to: 'recipes#snacks'
-  get '/dessert', to: 'recipes#dessert'
 
   resources :country_of_origins, only: [:show, :index], as: 'countries' do
       resources :recipes, only: [:index, :new, :create]

@@ -1,7 +1,0 @@
-<h1>Snacks</h1>
-
-<ul>
-<% @snacks.each do |recipe| %>
-    <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
-<% end %>
-</ul><br>

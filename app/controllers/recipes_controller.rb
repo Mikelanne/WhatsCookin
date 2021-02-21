@@ -63,30 +63,6 @@ class RecipesController < ApplicationController
         end
     end
 
-    def dinner
-        @dinner = Recipe.dinner
-    end
-
-    def breakfast
-        @breakfast = Recipe.breakfast
-    end
-
-    def lunch
-        @lunch = Recipe.lunch
-    end
-
-    def snacks
-        @snacks = Recipe.snack
-    end
-
-    def dessert
-        @desserts = Recipe.dessert
-    end
-
-    def meal
-        
-    end
-
     private
 
     def recipe_params(*args)
