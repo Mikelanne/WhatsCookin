@@ -1,14 +1,41 @@
 <h1><%= display_header(@country) %></h1>
 
-
+<label style="color: #b82e8a"><b>Breakfast:</label></b>
 <ul>
-<% @recipes.each do |recipe| %>
+<% @recipes.breakfast.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
+<% end %>
+</ul>
+<br>
+
+<label style="color: #b82e8a"><b>Lunch:</label></b>
+<ul>
+<% @recipes.lunch.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
+<% end %>
+</ul>
+<br>
+
+<label style="color: #b82e8a"><b>Dinner:</label></b>
+<ul>
+<% @recipes.dinner.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
+<% end %>
+</ul>
+<br>
+
+<label style="color: #b82e8a"><b>Dessert:</label></b>
+<ul>
+<% @recipes.dessert.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
+<% end %>
+</ul>
+<br>
+
+<label style="color: #b82e8a"><b>Snacks:</label></b>
+<ul>
+<% @recipes.snack.each do |recipe| %>
     <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
 <% end %>
 </ul>
 <br><br>
-
-
-<% if !params[:country_id] %>
-    <%= link_to "I only want to see dinner recipes", dinner_path %>
-<% end %>

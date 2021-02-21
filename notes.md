@@ -40,27 +40,27 @@ TO DO:
 [x] scope method where the recipes are ordered by meal type.
 [x] use scope methods in views somewhere
 [] oauth
-[] nested routes
-    [] a nested new route with form that relates to the parent (nest recipe new under country?)
+[x] nested routes
+    [x] a nested new route with form that relates to the parent (nest recipe new under country?)
     [x] a nested index or show route (under country, recipe index for all the recipes related to that country.)
-[] forms should display validation errors
+[x] forms should display validation errors
     [] fields_with_errors class (form_for)
-    [] error messages must be present within the view
+    [x] error messages must be present within the view
 [] DRY
     [] logic present in controllers should be encapsulated as methods in your models
     [] viwes should use helper methods and partials when appropriate
     [] follow patterns in Rails Style Guide
-[] welcome page
-[] style
+[x] welcome page
+[x] style
 [x] figure out edit form to not allow changes to user_id
 
-[] do more with country show page
-[] do more with country index
+[x] do more with country show page
+[x] do more with country index
 
-[] add description to recipes 
+[x] add description to recipes 
 [] nav links
 [x] partials for recipes
-    [] figure out how to render a partial within a partial for the new form only -- like we did for countries in form, do that for user_id maybe?
+    [x] figure out how to render a partial within a partial for the new form only -- like we did for countries in form, do that for user_id maybe?
 [] figure out why you have require login or if you need it
 [x] user CAN change country_id on recipe under edit
 

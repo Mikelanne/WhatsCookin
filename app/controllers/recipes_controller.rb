@@ -83,6 +83,10 @@ class RecipesController < ApplicationController
         @desserts = Recipe.dessert
     end
 
+    def meal
+        
+    end
+
     private
 
     def recipe_params(*args)
