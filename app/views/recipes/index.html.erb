@@ -39,3 +39,12 @@
 <% end %>
 </ul>
 <br><br>
+
+
+<% if !params[:country_of_origin_id] %>
+    <%= link_to "Countries featured in these recipes", country_of_origins_path %>
+<% end %>
+
+<% if params[:country_of_origin_id] %>
+    <%= link_to "Add a New Recipe from #{@country.name}", new_country_of_origin_recipe_path %>
+<% end %>
