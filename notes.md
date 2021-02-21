@@ -39,7 +39,7 @@ MEAL TYPES
 TO DO:
 [x] scope method where the recipes are ordered by meal type.
 [x] use scope methods in views somewhere
-[] oauth
+[x] oauth
 [x] nested routes
     [x] a nested new route with form that relates to the parent (nest recipe new under country?)
     [x] a nested index or show route (under country, recipe index for all the recipes related to that country.)
@@ -58,13 +58,8 @@ TO DO:
 [x] do more with country index
 
 [x] add description to recipes 
-[] nav links
+[x] nav links
 [x] partials for recipes
     [x] figure out how to render a partial within a partial for the new form only -- like we did for countries in form, do that for user_id maybe?
-[] figure out why you have require login or if you need it
+[x] figure out why you have require login or if you need it
 [x] user CAN change country_id on recipe under edit
-
-
-    
-
-    <%= f.collection_select(:country_of_origin_id, CountryOfOrigin.all, :id, :country, {:include_blank => true} )%>
