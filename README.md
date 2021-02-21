@@ -1,24 +1,32 @@
-# README
+# What's Cookin'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What's Cookin' is a rails application that allows users to; create and save recipes, browse the recipes in the index, and add recipes to a specific country's recipe page.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone from GitHub using this link: git@github.com:Mikelanne/WhatsCookin.git
 
-* System dependencies
+```bash
+git clone git@github.com:Mikelanne/WhatsCookin.git
+cd WhatsCookin
+```
 
-* Configuration
+Run the Rails Server in your terminal
 
-* Database creation
+``` bash
+rails s
+```
 
-* Database initialization
+And follow: http://127.0.0.1:3000
 
-* How to run the test suite
+## Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+All functionality will be in the browser.
 
-* Deployment instructions
+## Contributing
 
-* ...
+If you would like to contribute to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owner of this repository. 
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
