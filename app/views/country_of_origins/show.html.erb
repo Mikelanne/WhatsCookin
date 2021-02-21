@@ -1,4 +1,0 @@
-<h1><%= @country.name %></h1>
-
-<%= link_to "Recipes from this country in the library", country_of_origin_recipes_path(@country.id) %><br>
-<%= link_to("Add a new recipe to #{@country.name}'s library", new_country_of_origin_recipe_path(@country.id))%>

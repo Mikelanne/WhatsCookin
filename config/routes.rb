@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   root 'application#home'
   resources :recipes
-  # get '/countries', to: 'country_of_origins#index'
-  # get '/countries/:id', to: 'country_of_origins#show'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
@@ -13,7 +11,7 @@ Rails.application.routes.draw do
 
   get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
 
-  resources :country_of_origins, only: [:show, :index] do
+  resources :country_of_origins, only: [:index] do
       resources :recipes, only: [:index, :new, :create]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

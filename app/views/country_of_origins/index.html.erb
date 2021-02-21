@@ -2,6 +2,6 @@
 
 <ul>
 <% @countries.each do |country| %>
-    <li><%= link_to country.name, country_of_origin_path(country) %></li>
+    <li><%= country.name %> - <%= link_to "See Recipes", country_of_origin_recipes_path(country) %></li>
 <% end %>
 </ul>

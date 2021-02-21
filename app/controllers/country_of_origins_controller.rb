@@ -4,8 +4,4 @@ class CountryOfOriginsController < ApplicationController
         @countries = CountryOfOrigin.all
     end
 
-    def show
-        @country = CountryOfOrigin.find_by(id: params[:id])
-    end
-
 end
