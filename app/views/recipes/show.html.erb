@@ -1,13 +1,13 @@
 <h1><%= @recipe.name %></h1>
-<h3><%= @recipe.country_of_origin.name %> - <%= @recipe.meal_type.capitalize %></h3>
-<label>Skill Level: </label><%= @recipe.skill_level %><br><br>
+<h3 style="color:  #009999"><%= @recipe.country_of_origin.name %> - <%= @recipe.meal_type.capitalize %></h3>
+<h4 style="color:  #009999">Skill Level: <%= @recipe.skill_level %></h4><br>
 
 <p><%= @recipe.description %></p>
 
-<label>Ingredients:</label>
+<h4>Ingredients:</h4>
 <p><%= @recipe.ingredients %></p>
 
-<label>Directions:</label>
+<h4>Directions:</h4>
 <p><%= @recipe.directions %></p>
 
 

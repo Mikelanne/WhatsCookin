@@ -1,6 +1,6 @@
 <h1><%= display_header(@country) %></h1>
 
-<label style="color: #b82e8a"><b>Breakfast:</label></b>
+<label><b>Breakfast:</label></b>
 <ul>
 <% @recipes.breakfast.each do |recipe| %>
     <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
@@ -8,7 +8,7 @@
 </ul>
 <br>
 
-<label style="color: #b82e8a"><b>Lunch:</label></b>
+<label><b>Lunch:</label></b>
 <ul>
 <% @recipes.lunch.each do |recipe| %>
     <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
@@ -16,7 +16,7 @@
 </ul>
 <br>
 
-<label style="color: #b82e8a"><b>Dinner:</label></b>
+<label><b>Dinner:</label></b>
 <ul>
 <% @recipes.dinner.each do |recipe| %>
     <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
@@ -24,7 +24,7 @@
 </ul>
 <br>
 
-<label style="color: #b82e8a"><b>Dessert:</label></b>
+<label><b>Dessert:</label></b>
 <ul>
 <% @recipes.dessert.each do |recipe| %>
     <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
@@ -32,7 +32,7 @@
 </ul>
 <br>
 
-<label style="color: #b82e8a"><b>Snacks:</label></b>
+<label><b>Snacks:</label></b>
 <ul>
 <% @recipes.snack.each do |recipe| %>
     <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
