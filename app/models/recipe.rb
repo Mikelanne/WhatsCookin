@@ -6,6 +6,7 @@ class Recipe < ApplicationRecord
     scope :lunch, -> { where(meal_type: "lunch")}
     scope :dinner, -> { where(meal_type: "dinner")}
     scope :snack, -> { where(meal_type: "snack")}
+    scope :dessert, -> { where(meal_type: "dessert")}
 
     def self.ordered_by_skill_level
         self.order(skill_level: :asc)

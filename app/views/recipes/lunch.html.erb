@@ -1,7 +1,7 @@
-<h1>Dinner Recipes</h1>
+<h1>Lunch Recipes</h1>
 
 <ul>
-<% @dinner.each do |recipe| %>
+<% @lunch.each do |recipe| %>
     <li><%= link_to recipe.name, recipe_path(recipe) %> - Skill Level: <%= recipe.skill_level %></li>
 <% end %>
 </ul><br>
