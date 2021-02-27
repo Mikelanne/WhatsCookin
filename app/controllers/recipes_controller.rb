@@ -22,6 +22,7 @@ class RecipesController < ApplicationController
     end
 
     def create
+        @country = CountryOfOrigin.find_by_id(params[:country_of_origin_id])
         @recipe = Recipe.new(recipe_params(:name, :ingredients, :directions, :skill_level, :meal_type, :description, :country_of_origin_id, country_of_origin_attributes: [:name]))
         @recipe.user_id = current_user.id
         if @recipe.save
